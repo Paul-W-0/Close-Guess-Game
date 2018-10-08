@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace probability
 {
@@ -8,7 +8,7 @@ namespace probability
         {
             int playerone;
             int playertwo;
-            int solution = 47;
+            int solution = 76; // Must be greater than 60
             Console.WriteLine("Player One: ");
             playerone = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Player Two: ");
@@ -23,11 +23,11 @@ namespace probability
             }
             else if (playerone > 60 && playertwo < 60)
             {
-                Console.WriteLine("Player Two Wins!");
+                Console.WriteLine("Player One Wins!");
             }
             else if (playertwo > 60 && playerone < 60)
             {
-                Console.WriteLine("Player One Wins!");
+                Console.WriteLine("Player Two Wins!");
             }
             else if (playerone > 60 && playertwo > 60)
             {
@@ -54,13 +54,21 @@ namespace probability
             }
             else if (playerone < 60 && playertwo < 60)
             {
-                if (playerone < 60 && playertwo >= solution)
+                if (playerone < 60 && playertwo == solution)
                 {
                     Console.WriteLine("Player Two Wins!");
                 }
-                else if (playertwo < 60 && playerone >= solution)
+                else if (playertwo < 60 && playerone == solution)
                 {
                     Console.WriteLine("Player One Wins!");
+                }
+                else if (playerone > playertwo)
+                {
+                  Console.WriteLine("Player One Wins!");
+                }
+                else if (playertwo > playerone)
+                {
+                  Console.WriteLine("Player Two Wins!");
                 }
                 else
                 {
