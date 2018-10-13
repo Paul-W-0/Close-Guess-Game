@@ -44,6 +44,14 @@ namespace probability
                     Console.WriteLine("An Error Ocurred......");
                 }
             }
+            else if (playerone == 60 && playertwo < 60) 
+            {
+              Console.WriteLine("Player One Wins!");
+            }
+            else if (playertwo == 60 && playerone < 60) 
+            {
+              Console.WriteLine("Player Two Wins!");
+            }
             else if (playerone == solution && playertwo == solution)
             {
                 Console.WriteLine("Tie!");
